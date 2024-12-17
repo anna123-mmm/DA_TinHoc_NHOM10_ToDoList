@@ -13,30 +13,20 @@ namespace todolist
 {
     public partial class Form1 : Form
     {
-        private FrmAddTask frmadd;
         private Boolean showPanelTask = false;
 
         public Form1()
         {
             InitializeComponent();
             tooglePanels();
-            //DateTime current=DateTime.Now;
-            //DateTime start = DateTime.Parse("12/04/2024 12:09 PM");
-
-            //if (current.AddMinutes(10) >= start)
-            //    MessageBox.Show("dung");
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
             dgvToDo.Columns["StartDate"].DefaultCellStyle.Format = "MM/dd/yyyy hh:mm tt";
+            dgvToDo.Columns["Notify"].Visible = false;
             loadFile(dgvToDo, "todolist.txt");
-
-            //Timer reminderTimer = new Timer();
-            //reminderTimer.Tick += timer2_Tick;
-            //reminderTimer.Start();
 
             timer2.Start();
         }
