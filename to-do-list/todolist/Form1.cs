@@ -95,18 +95,18 @@ namespace todolist
 
        
 
-        //exit
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
-
-        }
-
+        
 
         //show date
         private void timer1_Tick(object sender, EventArgs e)
         {
             labelDate.Text = DateTime.Now.ToLongDateString();
+        }
+        //exit
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+
         }
 
         //add task
