@@ -90,6 +90,7 @@ namespace todolist
                 bool status = Convert.ToBoolean(row.Cells[0].Value);
                 row.Visible = !status;
             }
+
         }
 
        
@@ -99,6 +100,7 @@ namespace todolist
         {
             Close();
         }
+
 
         //show date
         private void timer1_Tick(object sender, EventArgs e)
